@@ -62,7 +62,7 @@ These datasets are based on or inspired by data from the two referenced studies 
 
 ---
 
-##Repository Structure
+## Repository Structure
 📂 data/
 ┣ 📜 ER_data.xlsx
 ┗ 📜 column_details.xlsx
