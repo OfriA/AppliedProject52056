@@ -61,6 +61,31 @@ The project includes:
 
 ## Repository Structure
 
+📂 data/  
+&nbsp;&nbsp;┣ 📜 ER_data.xlsx
+&nbsp;&nbsp;┗ 📜 column_details.xlsx
+
+📂 notebooks/  
+&nbsp;&nbsp;┣ 📓 01_exploratory_data_analysis.ipynb
+&nbsp;&nbsp;┣ 📓 02_baseline_model.ipynb
+&nbsp;&nbsp;┗ 📓 03_transformer_model_and_corn.ipynb
+📂 src/  
+&nbsp;&nbsp;┣ 📜 config.py
+&nbsp;&nbsp;┣ 📜 data_utils.py
+&nbsp;&nbsp;┣ 📜 embeddings.py
+&nbsp;&nbsp;┣ 📜 experiments.py
+&nbsp;&nbsp;┣ 📜 modeling.py
+&nbsp;&nbsp;┣ 📜 transformers_modeling.py
+&nbsp;&nbsp;┗ 📜 transformers_corn_modeling.py
+
+📂 results/  
+&nbsp;&nbsp;┗ 📊 Figures and aggregate experiment results  
+
+📜 README.md
+📜 requirements.txt
+
+## Repository Structure
+
 ```text
 AppliedProject52056/
 │
