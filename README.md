@@ -66,6 +66,7 @@ AppliedProject52056/
 │
 ├── README.md
 ├── requirements.txt
+├── final_report.pdf
 │
 ├── data/
 │   ├── ER_data.xlsx
