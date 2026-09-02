@@ -1,94 +1,104 @@
 # AppliedProject52056
 
 ## Overview
-This repository contains our applied Master's project at The Hebrew University of Jerusalem.  
-The project focuses on **text analysis related to parental emotion regulation and PTSD**, inspired by two academic studies:
 
-- **Keleynikov et al. (2025)** — *Trait and State Emotion Regulation and Parental Wellbeing During War*
-- **Keleynikov et al. (2025)** — *Parental PTSD and Children’s Well-Being During Wartime: The Role of Interpersonal Emotion Regulation*
+This repository contains our applied Master's project at **The Hebrew University of Jerusalem**.
 
-Our goal is to explore new insights from textual and psychological data that were previously analyzed in these studies — particularly how parents’ language, emotional expression, and coping strategies relate to mental health and family outcomes during wartime.  
+The project focuses on the analysis of textual and psychological data related to parental emotion regulation, PTSD, and family well-being during wartime, building on two academic studies:
 
-We plan to use **natural language processing (NLP)** and **statistical analysis** to extend the original findings and derive new conclusions from the text data.
+* **Keleynikov et al. (2025)** — *Trait and State Emotion Regulation and Parental Wellbeing During War*
+* **Keleynikov et al. (2025)** — *Parental PTSD and Children’s Well-Being During Wartime: The Role of Interpersonal Emotion Regulation*
+
+Our project examines whether information contained in parents' free-text responses can help predict **child CBCL severity**, represented by three levels: **Low, Medium, and High**.
+
+We combine exploratory data analysis, natural language processing, statistical modeling, and transformer-based methods to study the relationship between parental language and child behavioral and emotional outcomes.
 
 ---
 
 ## Objectives
-- Analyze text responses from parents regarding stress, emotion regulation, and well-being.
-- Identify linguistic and psychological markers of adaptive vs. maladaptive emotion regulation.
-- Explore relationships between linguistic features, PTSD symptoms, and parental burnout.
-- Generate new hypotheses about emotion regulation and resilience during wartime.
+
+* Explore the textual, demographic, and psychological characteristics of the dataset.
+* Analyze patterns in parent-written free-text responses.
+* Predict child CBCL severity using parental text.
+* Compare text-only models with models that also include child age.
+* Explore both standard multiclass and ordinal classification approaches.
 
 ---
 
 ## Dataset Description
+
 The repository includes two primary data files:
 
-| File | Description |
-|------|--------------|
-| **`ER_data.xlsx`** | Contains the main dataset used for analysis — parental responses, emotional measures, and related variables. |
-| **`column_details.xlsx`** | Provides a description of each column in `ER_data.xlsx`, including variable names, types, and measurement details. |
-
-These datasets are based on or inspired by data from the two referenced studies and will serve as the foundation for text and statistical analysis.
+| File                      | Description                                                                                                                                           |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`ER_data.xlsx`**        | Contains the main dataset used for analysis, including parental responses, psychological measures, demographic variables, and CBCL-related variables. |
+| **`column_details.xlsx`** | Provides descriptions of the variables and columns included in `ER_data.xlsx`.                                                                        |
 
 ---
 
-## Methods (Planned)
-1. **Data Preprocessing**
-   - Cleaning, tokenization, and normalization of text fields.
-   - Handling missing or outlier data.
+## Methods
 
-2. **Textual Analysis**
-   - Sentiment and emotion detection using lexicons or pretrained models.
-   - Topic modeling (e.g., LDA, BERTopic) to uncover themes.
-   - Linguistic feature extraction (e.g., LIWC categories, pronoun use, word embeddings).
+The project includes:
 
-3. **Quantitative Analysis**
-   - Correlation and regression between linguistic markers and psychological variables (e.g., PTSD, parental burnout).
-   - Group comparisons (e.g., high vs. low emotion regulation).
-   - Visualization of key emotional and cognitive patterns.
+1. **Exploratory Data Analysis**
 
-4. **Advanced Modeling (optional)**
-   - Fine-tuned transformer-based models (e.g., BERT, DistilBERT).
-   - Clustering or classification of coping styles.
+   * Sample and CBCL exploration.
+   * Analysis of text characteristics and word frequencies.
+   * Hebrew text preprocessing and lemmatization.
 
----
+2. **Baseline Modeling**
 
-## Expected Outcomes
-- Identification of emotional and linguistic indicators of stress and coping.
-- Quantitative insights linking language use to well-being measures.
-- Visualization of emotion regulation dynamics in wartime family contexts.
-- New hypotheses and intervention ideas for supporting parents and children under trauma exposure.
+   * Multilingual E5 text embeddings.
+   * Multinomial Logistic Regression.
+
+3. **Transformer-Based Modeling**
+
+   * XLM-RoBERTa classification.
+   * Evaluation of text-only and text + child-age configurations.
+   * Ordinal classification using CORN.
 
 ---
 
 ## Repository Structure
-📂 data/  
-&nbsp;&nbsp;┣ 📜 ER_data.xlsx  
-&nbsp;&nbsp;┗ 📜 column_details.xlsx  
-📂 notebooks/  
-&nbsp;&nbsp;┗ 📓 text_analysis.ipynb — Jupyter notebooks for exploration & modeling  
-📂 src/  
-&nbsp;&nbsp;┣ 📜 preprocessing.py  
-&nbsp;&nbsp;┣ 📜 analysis.py  
-&nbsp;&nbsp;┗ 📜 visualization.py  
-📂 reports/  
-&nbsp;&nbsp;┗ 📊 figures, charts, and summary outputs  
-📜 README.md  
 
-
+```text
+AppliedProject52056/
+│
+├── README.md
+├── requirements.txt
+│
+├── data/
+│   ├── ER_data.xlsx
+│   └── column_details.xlsx
+│
+├── notebooks/
+│   ├── 01_exploratory_data_analysis.ipynb
+│   ├── 02_baseline_model.ipynb
+│   └── 03_transformer_model_and_corn.ipynb
+│
+└── src/
+    ├── config.py
+    ├── data_utils.py
+    ├── embeddings.py
+    ├── experiments.py
+    ├── modeling.py
+    ├── transformers_modeling.py
+    └── transformers_corn_modeling.py
+```
 
 ---
 
 ## Team
-- **Ofri Ahiel**
-- **Sagi Levin**
 
-Master’s in Data Science, The Hebrew University of Jerusalem  
+* **Ofri Ahiel**
+* **Sagi Levin**
+
+Master's in Data Science, The Hebrew University of Jerusalem
 Applied Project - 52056
 
 ---
 
 ## References
-- Keleynikov, M. et al. (2025). *Trait and State Emotion Regulation and Parental Wellbeing During War.* *Personality and Individual Differences.*
-- Keleynikov, M. et al. (2025). *Parental PTSD and Children’s Well-Being During Wartime: The Role of Interpersonal Emotion Regulation.* *International Journal on Child Maltreatment.*
+
+* Keleynikov, M. et al. (2025). *Trait and State Emotion Regulation and Parental Wellbeing During War.* *Personality and Individual Differences.*
+* Keleynikov, M. et al. (2025). *Parental PTSD and Children’s Well-Being During Wartime: The Role of Interpersonal Emotion Regulation.* *International Journal on Child Maltreatment.*
