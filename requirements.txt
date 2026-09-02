@@ -1,0 +1,17 @@
+numpy
+pandas
+scipy
+scikit-learn
+
+matplotlib
+seaborn
+
+openpyxl
+stanza
+
+torch
+sentence-transformers
+transformers
+datasets
+accelerate
+sentencepiece
